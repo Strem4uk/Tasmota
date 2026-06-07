@@ -269,7 +269,7 @@ jobs:
           name: tasmota32-${{ matrix.language }}
           path: ./build_output
 
-  Release:
+Release:
     needs: [base-images, base32-images, language-images, language32-images]
     runs-on: ubuntu-latest
     continue-on-error: true
@@ -294,5 +294,3 @@ jobs:
           ./release/tasmota*
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  
